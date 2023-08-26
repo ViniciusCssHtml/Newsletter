@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #242742;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.update {
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  border-radius: 40px;
+  gap: 20px;
+}
+.update.ativo {
+  display: none;
+}
+.update-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+}
+h1 {
+  font-size: 3.5rem;
+  color: #242742;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+li img {
+  width: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+input {
+  padding: 15px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #242742;
+}
+
+.error {
+  color: #ff644d;
+  display: none;
+}
+
+.error.ativo {
+  display: block;
+}
+#email.ativo {
+  border: 1px solid red;
+}
+input::placeholder {
+  font-size: 1rem;
+}
+button {
+  padding: 15px;
+  border-radius: 4px;
+  border: none;
+  background-color: #242742;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: 0.5s ease-in;
+}
+
+button:hover {
+  background-color: #ff644d;
+  transition: 0.3s ease-in;
+}
+article {
+  display: none;
+}
+article.ativo {
+  display: grid;
+  width: 400px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+}
+article div {
+  display: grid;
+  gap: 20px;
+}
+article div img {
+  width: 50px;
+  height: 50px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #242742;
+}
+.enviado {
+  color: #ff644d;
+  font-weight: bold;
+}
+.mobile {
+  display: none;
+}
+@media (max-width: 900px) {
+  .update {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 10px;
+  }
+  .update-info {
+    padding: 20px;
+    gap: 20px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  form {
+    flex-wrap: wrap;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    border-radius: 20px;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
